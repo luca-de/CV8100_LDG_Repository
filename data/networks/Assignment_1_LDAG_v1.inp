@@ -1,0 +1,176 @@
+[TITLE]
+
+[JUNCTIONS]
+;;ID                             	Elev        	Demand      	Pattern                        
+ J-1                            	189.1000    
+ J-2                            	184.5000    
+ J-3                            	176.9000    
+ J-4                            	166.2000    
+ J-5                            	155.5000    
+ J-6                            	176.9000    
+ J-7                            	176.9000    
+ J-8                            	183.0000    
+ J-9                            	149.4000    
+
+[RESERVOIRS]
+;;ID                             	Head        	Pattern                        
+
+[TANKS]
+;;ID                             	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve                       	Overflow    
+ T-1                            	198.2000    	4.6000      	0.0000      	9.2000      	15.0000     	0.0000      	                               
+
+[PIPES]
+;;ID                             	Node1                          	Node2                          	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ P-1                            	T-1                            	J-1                            	140.0000    	150.0000    	0.0010      	0.0000      	      
+ P-2                            	J-1                            	J-2                            	250.0000    	150.0000    	0.0010      	0.0000      	      
+ P-3                            	J-2                            	J-3                            	400.0000    	150.0000    	0.0010      	0.0000      	      
+ P-4                            	J-3                            	J-4                            	430.0000    	150.0000    	0.0010      	0.0000      	      
+ P-5                            	J-4                            	J-5                            	270.0000    	150.0000    	0.0010      	0.0000      	      
+ P-6                            	J-5                            	J-6                            	580.0000    	150.0000    	0.0010      	0.0000      	      
+ P-7                            	J-2                            	J-7                            	1000.0000   	150.0000    	0.0010      	0.0000      	      
+ P-8                            	J-7                            	J-8                            	180.0000    	150.0000    	0.0010      	0.0000      	      
+ P-9                            	J-7                            	J-4                            	400.0000    	150.0000    	0.0010      	0.0000      	      
+ P-10                           	J-5                            	J-9                            	170.0000    	150.0000    	0.0010      	0.0000      	      
+
+[PUMPS]
+;;ID                             	Node1                          	Node2                          	Parameters  
+
+[VALVES]
+;;ID                             	Node1                          	Node2                          	Diameter    	Type  	Setting     	MinorLoss   
+
+[DEMANDS]
+;;Junction                       	Demand        	Pattern                        	Category                       
+ J-1                            	1.300000      	                               
+ J-2                            	1.300000      	                               
+ J-3                            	1.300000      	                               
+ J-4                            	1.300000      	                               
+ J-5                            	1.300000      	                               
+ J-6                            	1.300000      	                               
+ J-7                            	1.300000      	                               
+ J-8                            	1.300000      	                               
+ J-9                            	1.300000      	                               
+
+[EMITTERS]
+;;Junction                       	Coefficient   
+
+[LEAKAGE]
+;;Pipe                           	Leak Area     	Leak Expansion
+
+[STATUS]
+;;ID                             	Status/Setting
+
+[PATTERNS]
+;;ID                             	Multipliers 
+
+[CURVES]
+;;ID                             	X-Value     	Y-Value     
+
+[CONTROLS]
+
+[RULES]
+
+[QUALITY]
+;;ID                             	InitQual      
+
+[SOURCES]
+;;ID                             	Type     	Quality       	Pattern                        
+
+[MIXING]
+;;ID                             	Model   
+ T-1                            	MIXED   	      1.0000
+
+[REACTIONS]
+ ORDER  BULK            1.00
+ ORDER  WALL            1
+ ORDER  TANK            1.00
+ GLOBAL BULK            0.000000
+ GLOBAL WALL            0.000000
+
+[REACTIONS]
+;Type     	Pipe/Tank                      	Coefficient 
+
+[ENERGY]
+ GLOBAL EFFIC        75.0000
+ DEMAND CHARGE       0.0000
+
+[TIMES]
+ DURATION            0:00:00
+ HYDRAULIC TIMESTEP  1:00:00
+ QUALITY TIMESTEP    0:06:00
+ REPORT TIMESTEP     1:00:00
+ REPORT START        0:00:00
+ PATTERN TIMESTEP    1:00:00
+ PATTERN START       0:00:00
+ RULE TIMESTEP       0:06:00
+ START CLOCKTIME     0:00:00
+ STATISTIC           NONE
+
+[OPTIONS]
+ UNITS               LPS
+ PRESSURE            METERS
+ HEADLOSS            D-W
+ UNBALANCED          STOP
+ QUALITY             NONE
+ DEMAND MULTIPLIER   1.0000
+ EMITTER EXPONENT    0.5000
+ BACKFLOW ALLOWED    YES
+ VISCOSITY           1.000000
+ DIFFUSIVITY         1.000000
+ SPECIFIC GRAVITY    1.000000
+ TRIALS              50
+ ACCURACY            0.00100000
+ TOLERANCE           0.01000000
+ CHECKFREQ           2
+ MAXCHECK            10
+ DAMPLIMIT           0.00000000
+
+[REPORT]
+ PAGESIZE            0
+ STATUS              YES
+ SUMMARY             YES
+ ENERGY              NO
+ MESSAGES            YES
+ NODES               NONE
+ LINKS               NONE
+ Elevation           NO
+ Demand              PRECISION 2
+ Head                PRECISION 2
+ Pressure            PRECISION 2
+ Quality             PRECISION 2
+ Length              NO
+ Diameter            NO
+ Flow                PRECISION 2
+ Velocity            PRECISION 2
+ Headloss            PRECISION 2
+ Quality             NO
+ State               NO
+ Setting             NO
+ Reaction            NO
+
+[TAGS]
+;;Object  	ID                             	Tag
+
+[COORDINATES]
+;;ID                             	X-Coord       	Y-Coord       
+ J-1                            	8902.154921   	8208.438491   
+ J-2                            	8772.083091   	5867.145538   
+ J-3                            	8468.582152   	2138.419724   
+ J-4                            	4306.283570   	2225.134278   
+ J-5                            	1661.489678   	1878.276063   
+ J-6                            	967.773248    	7081.149291   
+ J-7                            	3959.425354   	5867.145538   
+ J-8                            	3699.281693   	7514.722060   
+ J-9                            	57.270433     	1618.132401   
+ T-1                            	9769.300459   	9292.370414   
+
+[VERTICES]
+;;ID                             	X-Coord       	Y-Coord       
+
+
+[LABELS]
+   8944.954292     9955.162904  "Reservoir1"  T-1  "Arial Narrow"  10  YES  NO
+
+[BACKDROP]
+DIMENSIONS	-428.331068	1201.280876	10254.901961	10372.014429
+UNITS     	None	0
+FILE      	""

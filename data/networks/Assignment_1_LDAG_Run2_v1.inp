@@ -1,0 +1,154 @@
+[TITLE]
+
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ J-1             	189.1000    	1.300000    	                	;
+ J-2             	184.5000    	1.300000    	                	;
+ J-3             	176.9000    	1.300000    	                	;
+ J-4             	166.2000    	1.300000    	                	;
+ J-5             	155.5000    	1.300000    	                	;
+ J-6             	176.9000    	1.300000    	                	;
+ J-7             	176.9000    	1.300000    	                	;
+ J-8             	183.0000    	1.300000    	                	;
+ J-9             	149.4000    	1.300000    	                	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
+ T-1             	198.2000    	4.6000      	0.0000      	9.2000      	15.0000     	0.0000      	                	;
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ P-1             	T-1             	J-1             	140.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-2             	J-1             	J-2             	250.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-3             	J-2             	J-3             	400.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-4             	J-3             	J-4             	430.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-5             	J-4             	J-5             	270.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-6             	J-5             	J-6             	580.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-7             	J-2             	J-7             	500         	150.0000    	0.0010      	0.0000      	Open  	;
+ P-8             	J-7             	J-8             	180.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-9             	J-7             	J-4             	400.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+ P-10            	J-5             	J-9             	170.0000    	150.0000    	0.0010      	0.0000      	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+ J-6             	1.300000    	                	; 
+ J-6             	65          	                	; 
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+
+[CONTROLS]
+
+
+[RULES]
+
+
+[ENERGY]
+ Global Efficiency  	75.0000
+ Global Price       	0
+ Demand Charge      	0.0000
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1.00
+ Order Tank            	1.00
+ Order Wall            	1
+ Global Bulk           	0.000000
+ Global Wall           	0.000000
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	0:00 
+ Hydraulic Timestep 	1:00 
+ Quality Timestep   	0:06 
+ Pattern Timestep   	1:00 
+ Pattern Start      	0:00 
+ Report Timestep    	1:00 
+ Report Start       	0:00 
+ Start ClockTime    	0:00:00
+ Statistic          	NONE
+
+[REPORT]
+ Status             	Yes
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	D-W
+ Specific Gravity   	1.000000
+ Viscosity          	1.000000
+ Trials             	50
+ Accuracy           	0.00100000
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0.00000000
+ Unbalanced         	STOP
+ Pattern            	1
+ Demand Multiplier  	1.0000
+ Emitter Exponent   	0.5000
+ Quality            	NONE mg/L
+ Diffusivity        	1.000000
+ Tolerance          	0.01000000
+
+[COORDINATES]
+;Node            	X-Coord           	Y-Coord
+J-1             	8902.155          	8208.438          
+J-2             	8772.083          	5867.146          
+J-3             	8468.582          	2138.420          
+J-4             	4306.284          	2225.134          
+J-5             	1661.490          	1878.276          
+J-6             	967.773           	7081.149          
+J-7             	3959.425          	5867.146          
+J-8             	3699.282          	7514.722          
+J-9             	57.270            	1618.132          
+T-1             	9769.300          	9292.370          
+
+[VERTICES]
+;Link            	X-Coord           	Y-Coord
+
+[LABELS]
+;X-Coord             Y-Coord             Label & Anchor Node
+8944.954          	9955.163          	"Reservoir1"	
+
+[BACKDROP]
+  DIMENSIONS  	-428.331          	1201.281          	10254.902         	10372.014         
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
